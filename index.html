@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -10,5 +10,192 @@
   <canvas id="chart"></canvas>
 
   <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+//NEWWEBPAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center header content */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    margin-bottom: 0;
+}
+
+.header-left {
+    text-align: center; /* Center the text */
+}
+
+.header-right {
+    display: flex;
+    align-items: center; /* Vertically align buttons */
+}
+
+.header-right button {
+    background-color: transparent;
+    border: none;
+    color: rgb(216, 54, 54);
+    margin-left: 10px;
+    cursor: pointer;
+     font-size: 16px; /* Adjust the font size */
+            padding: 8px 12px; /* Adjust the padding for larger button size */
+}
+
+.main {
+    padding: 1em;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+#map {
+    width: 60%;
+    height: 500px;
+}
+
+#api-data {
+    width: 100%; /* Take full width */
+    max-width: 400px; /* Set a max-width */
+    padding: 1em;
+    text-align: center; /* Center text */
+    margin-top: 1em; /* Add some spacing */
+}
+
+#statistics {
+    margin-top: 0; /* Remove margin top from statistics */
+}
+
+.center-text {
+    text-align: center;
+    margin: 0;
+}
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+    <title>Noise Monitoring Chennai</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1 class="center-text">Sound Map of Chennai</h1>
+            <h2 class="center-text">24 hour window</h2>
+        </div>
+        <div class="header-right">
+            <button>Tech</button>
+            <button>About Us</button>
+            <button>Volunteer</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- <div class="map-container">
+            <div id="map"></div>
+            <div id="api-data"></div>
+        </div> -->
+    </main>
+        <div id="statistics" class="center-text">
+            <p>Highest: <span id="highestValue">Loading...</span></p>
+            <p>Lowest: <span id="lowestValue">Loading...</span></p>
+            <p>Average: <span id="averageValue">Loading...</span></p>
+        </div>
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <p>About Us: The DecibelSafari Team</p>
+                <p><br>This project is run by Robotics enthusiasts Akash and Shahbaz based in Chennai.</br>
+                    <br>They are working on multiple projects to solve social issues. They are being mentored by Mr. Ananth throughout this project.</br>
+                    <br>Shahbaz and Akash also conduct Robotics Worshops for school and college students. </br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, but also the leap into electronic typesetting, 
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+                    Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+
+        <div id="techModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeTechModal">&times;</span>
+                <p>Tech Information</p>
+                <p>
+                    <br>This Noise monitoring system uses an ESP-8266 module which is easy to plug and install in your roof or balcony</br>
+                    <br>It uses a mic which can record the noise in your surroundings in decibels. 
+                    It has an adapter which is adequate to power up the ESP board and store the noise with the timestamp.</br>
+                    
+                </p>
+            </div>
+        </div>
+
+        <div id="volunteerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeVolunteerModal">&times;</span>
+                <p>Volunteer Information</p>
+                <p>If you're interested in volunteering, please fill out the <a href="https://forms.gle/CF3As2fg7kB8MYSg8" target="_blank"> volunteer form</a></p>
+                    <p>Please contact us at codebotix@gmail.com</p>
+            </div>
+        </div>
+        
+        
+        
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
