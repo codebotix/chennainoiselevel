@@ -1,2 +1,2 @@
 # chennainoiselevel
-Chennai noise level in decivel
+Chennai noise level in decibel
